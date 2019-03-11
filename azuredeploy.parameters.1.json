@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "adminUsername": {
+            "value": "zdadmin"
+        },
+        "adminPasswordOrKey": {
+            "value": "tc$6ms#9)4dFUi"
+        },
+        "customData": {
+            "value": "[base64(concat('#cloud-config\n\nwrite_files:\n -  encoding: gzip\n    content: !!binary |\n        H4sIAIY0qlkAAyvJyCxWAKJEhZLU4hIuABITBXIPAAAA\n    path: /opt/azure/configure-test-template.sh\n    permissions: \"0744\"\n\n',variables('agentRunCmdFile'),variables('agentRunCmd')))]"
+        }
+    }
+}
+
+
+
+
+
+

@@ -1,2 +1,2 @@
 # zerodown-zvSample
-ZV Sample
+Zerodown's ZenVault Sample Application
